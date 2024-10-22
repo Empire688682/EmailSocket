@@ -6,7 +6,7 @@ dotenv.config();
 
 //app config
 const app = express();
-const port = 600;
+const port = process.env.PORT || 600;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
