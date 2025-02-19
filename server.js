@@ -1,4 +1,4 @@
-import express, { text } from 'express';
+import express from 'express';
 import cors from 'cors';
 import nodemailer from 'nodemailer';
 import dotenv from 'dotenv';
@@ -30,7 +30,6 @@ let transporter = nodemailer.createTransport({
 
 // POST route to handle form submissions
 app.post("/submit", (req, res) => {
-    console.log("Form data received:", req.body);
     const { name, email, subject, message } = req.body;
     
     if (!name || !email || !subject || !message) {
